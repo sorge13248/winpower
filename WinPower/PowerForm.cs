@@ -122,7 +122,9 @@ namespace WinPower
 
         private void hibernateBtn_Click(object sender, EventArgs e)
         {
-
+            selectedOperation = SelectedOperation.HIBERNATE;
+            StopTimer();
+            StartTimer();
         }
     }
 }

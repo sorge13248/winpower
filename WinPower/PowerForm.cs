@@ -1,10 +1,12 @@
 ﻿using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace WinPower
 {
     public partial class PowerForm : Form
     {
+        private const string SELECTED_COLOR = "#FF0000";
         private int remainingSeconds;
         private SelectedOperation selectedOperation;
         
@@ -45,6 +47,8 @@ namespace WinPower
             selectedOperation = SelectedOperation.SHUTDOWN;
             StopTimer();
             StartTimer();
+            shutdownBtn.BackColor = ColorTranslator.FromHtml(SELECTED_COLOR);
+            shutdownBtn.FlatAppearance.MouseOverBackColor = ColorTranslator.FromHtml(SELECTED_COLOR);
         }
 
         private void restartBtn_Click(object sender, EventArgs e)
@@ -52,6 +56,8 @@ namespace WinPower
             selectedOperation = SelectedOperation.RESTART;
             StopTimer();
             StartTimer();
+            restartBtn.BackColor = ColorTranslator.FromHtml(SELECTED_COLOR);
+            restartBtn.FlatAppearance.MouseOverBackColor = ColorTranslator.FromHtml(SELECTED_COLOR);
         }
 
         private int GetTimeout()
@@ -61,6 +67,12 @@ namespace WinPower
 
         private void StartTimer()
         {
+            shutdownBtn.BackColor = Color.Transparent;
+            restartBtn.BackColor = Color.Transparent;
+            hibernateBtn.BackColor = Color.Transparent;
+            shutdownBtn.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            restartBtn.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            hibernateBtn.FlatAppearance.MouseOverBackColor = Color.Transparent;
             remainingSeconds = GetTimeout();
             timer1.Start();
             secondsPgb.Value = 100;
@@ -125,6 +137,8 @@ namespace WinPower
             selectedOperation = SelectedOperation.HIBERNATE;
             StopTimer();
             StartTimer();
+            hibernateBtn.BackColor = System.Drawing.ColorTranslator.FromHtml(SELECTED_COLOR);
+            hibernateBtn.FlatAppearance.MouseOverBackColor = ColorTranslator.FromHtml(SELECTED_COLOR);
         }
     }
 }

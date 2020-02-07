@@ -70,7 +70,7 @@
             this.hibernateBtn.Dock = System.Windows.Forms.DockStyle.Fill;
             this.hibernateBtn.FlatAppearance.BorderSize = 0;
             this.hibernateBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.hibernateBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
+            this.hibernateBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.hibernateBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.hibernateBtn.Location = new System.Drawing.Point(578, 30);
             this.hibernateBtn.Margin = new System.Windows.Forms.Padding(30);
@@ -90,7 +90,7 @@
             this.restartBtn.Dock = System.Windows.Forms.DockStyle.Fill;
             this.restartBtn.FlatAppearance.BorderSize = 0;
             this.restartBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.restartBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
+            this.restartBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.restartBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.restartBtn.Location = new System.Drawing.Point(304, 30);
             this.restartBtn.Margin = new System.Windows.Forms.Padding(30);
@@ -110,7 +110,7 @@
             this.backToWinBtn.Dock = System.Windows.Forms.DockStyle.Fill;
             this.backToWinBtn.FlatAppearance.BorderSize = 0;
             this.backToWinBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.backToWinBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
+            this.backToWinBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.backToWinBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.backToWinBtn.Location = new System.Drawing.Point(852, 30);
             this.backToWinBtn.Margin = new System.Windows.Forms.Padding(30);
@@ -130,7 +130,7 @@
             this.shutdownBtn.Dock = System.Windows.Forms.DockStyle.Fill;
             this.shutdownBtn.FlatAppearance.BorderSize = 0;
             this.shutdownBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.shutdownBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
+            this.shutdownBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.shutdownBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.shutdownBtn.Location = new System.Drawing.Point(30, 30);
             this.shutdownBtn.Margin = new System.Windows.Forms.Padding(30);
@@ -168,7 +168,7 @@
             this.secondsLbl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.secondsLbl.Location = new System.Drawing.Point(3, 0);
             this.secondsLbl.Name = "secondsLbl";
-            this.secondsLbl.Size = new System.Drawing.Size(109, 50);
+            this.secondsLbl.Size = new System.Drawing.Size(94, 50);
             this.secondsLbl.TabIndex = 0;
             this.secondsLbl.Text = "60 seconds";
             this.secondsLbl.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -176,9 +176,9 @@
             // secondsPgb
             // 
             this.secondsPgb.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.secondsPgb.Location = new System.Drawing.Point(118, 3);
+            this.secondsPgb.Location = new System.Drawing.Point(103, 3);
             this.secondsPgb.Name = "secondsPgb";
-            this.secondsPgb.Size = new System.Drawing.Size(870, 44);
+            this.secondsPgb.Size = new System.Drawing.Size(885, 44);
             this.secondsPgb.TabIndex = 1;
             this.secondsPgb.Value = 100;
             // 
@@ -203,7 +203,7 @@
             // 
             // PowerForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1663, 986);

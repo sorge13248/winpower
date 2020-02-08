@@ -5,6 +5,9 @@ namespace WinPower
 {
     static class Program
     {
+
+        public static Form powerForm;
+
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -19,12 +22,12 @@ namespace WinPower
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            Form f = new SettingsForm();
+            Form f = new PowerForm();
             for (int i = 0; i < args.Length; i++)
             {
-                if (args[i] == "--power") // Se viene rilevata l'opzione --power
+                if (args[i] == "--settings") // Se viene rilevata l'opzione --power
                 {
-                    f = new PowerForm(); // lancia la finestra
+                    f = new SettingsForm(); // lancia la finestra
                 }
             }
 

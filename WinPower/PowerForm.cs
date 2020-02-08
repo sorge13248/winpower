@@ -21,6 +21,7 @@ namespace WinPower
         public PowerForm()
         {
             InitializeComponent();
+            Program.powerForm = this;
             StopTimer();
 
             switch (Properties.Settings.Default.defaultSel)
@@ -170,13 +171,27 @@ namespace WinPower
             selectedOperation = SelectedOperation.HIBERNATE;
             StopTimer();
             StartTimer();
-            hibernateBtn.BackColor = System.Drawing.ColorTranslator.FromHtml(SELECTED_COLOR);
+            hibernateBtn.BackColor = ColorTranslator.FromHtml(SELECTED_COLOR);
             hibernateBtn.FlatAppearance.MouseOverBackColor = ColorTranslator.FromHtml(SELECTED_COLOR);
         }
 
         private void advRestartBtn_Click(object sender, EventArgs e)
         {
             shutdownCmd('o');
+        }
+
+        private void settingsBtn_Click(object sender, EventArgs e)
+        {
+            TopMost = false;
+            StopTimer();
+            ResetButtonsColors();
+            Form f = new SettingsForm();
+            f.ShowDialog();
+        }
+
+        private void PowerForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Program.powerForm = null;
         }
     }
 }

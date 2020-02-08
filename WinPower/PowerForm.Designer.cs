@@ -42,6 +42,7 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.advRestartBtn = new System.Windows.Forms.Button();
             this.debugLbl = new System.Windows.Forms.Label();
+            this.settingsBtn = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.timeoutPnl.SuspendLayout();
             this.SuspendLayout();
@@ -230,12 +231,27 @@
             this.debugLbl.Text = "DEBUG MODE";
             this.debugLbl.Visible = false;
             // 
+            // settingsBtn
+            // 
+            this.settingsBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.settingsBtn.FlatAppearance.BorderSize = 0;
+            this.settingsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.settingsBtn.Font = new System.Drawing.Font("Microsoft Tai Le", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.settingsBtn.Location = new System.Drawing.Point(997, 879);
+            this.settingsBtn.Name = "settingsBtn";
+            this.settingsBtn.Size = new System.Drawing.Size(309, 78);
+            this.settingsBtn.TabIndex = 5;
+            this.settingsBtn.Text = "Settings";
+            this.settingsBtn.UseVisualStyleBackColor = true;
+            this.settingsBtn.Click += new System.EventHandler(this.settingsBtn_Click);
+            // 
             // PowerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1663, 986);
+            this.Controls.Add(this.settingsBtn);
             this.Controls.Add(this.debugLbl);
             this.Controls.Add(this.advRestartBtn);
             this.Controls.Add(this.timeoutPnl);
@@ -254,6 +270,7 @@
             this.Text = "WinPower";
             this.TopMost = true;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.PowerForm_FormClosing);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.timeoutPnl.ResumeLayout(false);
             this.timeoutPnl.PerformLayout();
@@ -275,5 +292,6 @@
         private System.Windows.Forms.Button restartBtn;
         private System.Windows.Forms.Button advRestartBtn;
         private System.Windows.Forms.Label debugLbl;
+        private System.Windows.Forms.Button settingsBtn;
     }
 }

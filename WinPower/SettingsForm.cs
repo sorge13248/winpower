@@ -57,5 +57,10 @@ namespace WinPower
             Form f = new PowerForm();
             f.Show();
         }
+
+        private void SettingsForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Program.powerForm.TopMost = true;
+        }
     }
 }

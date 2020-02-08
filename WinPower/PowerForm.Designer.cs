@@ -40,6 +40,8 @@
             this.secondsPgb = new System.Windows.Forms.ProgressBar();
             this.cancelBtn = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.advRestartBtn = new System.Windows.Forms.Button();
+            this.debugLbl = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.timeoutPnl.SuspendLayout();
             this.SuspendLayout();
@@ -201,12 +203,41 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // advRestartBtn
+            // 
+            this.advRestartBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.advRestartBtn.FlatAppearance.BorderSize = 0;
+            this.advRestartBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.advRestartBtn.Font = new System.Drawing.Font("Microsoft Tai Le", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.advRestartBtn.Location = new System.Drawing.Point(1327, 879);
+            this.advRestartBtn.Name = "advRestartBtn";
+            this.advRestartBtn.Size = new System.Drawing.Size(309, 78);
+            this.advRestartBtn.TabIndex = 3;
+            this.advRestartBtn.Text = "Advanced Restart";
+            this.advRestartBtn.UseVisualStyleBackColor = true;
+            this.advRestartBtn.Click += new System.EventHandler(this.advRestartBtn_Click);
+            // 
+            // debugLbl
+            // 
+            this.debugLbl.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.debugLbl.AutoSize = true;
+            this.debugLbl.BackColor = System.Drawing.Color.Maroon;
+            this.debugLbl.Font = new System.Drawing.Font("Microsoft Tai Le", 26F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.debugLbl.Location = new System.Drawing.Point(645, 87);
+            this.debugLbl.Name = "debugLbl";
+            this.debugLbl.Size = new System.Drawing.Size(372, 67);
+            this.debugLbl.TabIndex = 4;
+            this.debugLbl.Text = "DEBUG MODE";
+            this.debugLbl.Visible = false;
+            // 
             // PowerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1663, 986);
+            this.Controls.Add(this.debugLbl);
+            this.Controls.Add(this.advRestartBtn);
             this.Controls.Add(this.timeoutPnl);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Font = new System.Drawing.Font("Microsoft Tai Le", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -226,6 +257,7 @@
             this.timeoutPnl.ResumeLayout(false);
             this.timeoutPnl.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -238,7 +270,9 @@
         private System.Windows.Forms.ProgressBar secondsPgb;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Button cancelBtn;
-        private System.Windows.Forms.Button restartBtn;
         private System.Windows.Forms.Button hibernateBtn;
+        private System.Windows.Forms.Button restartBtn;
+        private System.Windows.Forms.Button advRestartBtn;
+        private System.Windows.Forms.Label debugLbl;
     }
 }

@@ -26,9 +26,9 @@ namespace WinPower.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("0")]
-        public int defaultSel {
+        public uint defaultSel {
             get {
-                return ((int)(this["defaultSel"]));
+                return ((uint)(this["defaultSel"]));
             }
             set {
                 this["defaultSel"] = value;
@@ -38,12 +38,21 @@ namespace WinPower.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("30")]
-        public int timeout {
+        public uint timeout {
             get {
-                return ((int)(this["timeout"]));
+                return ((uint)(this["timeout"]));
             }
             set {
                 this["timeout"] = value;
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool debug {
+            get {
+                return ((bool)(this["debug"]));
             }
         }
     }

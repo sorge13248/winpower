@@ -13,11 +13,16 @@ namespace WinPower
 
         private void SettingsForm_Load(object sender, EventArgs e)
         {
-            defaultSelCmb.SelectedIndex = Properties.Settings.Default.defaultSel;
+            defaultSelCmb.SelectedIndex = (int)Properties.Settings.Default.defaultSel;
             timeoutTxt.Text = Properties.Settings.Default.timeout.ToString();
 
             Version version = Assembly.GetExecutingAssembly().GetName().Version;
             versionLbl.Text = string.Format("{0} {1}.{2}", versionLbl.Text, version.Major, version.Minor);
+
+            if (Properties.Settings.Default.debug)
+            {
+                debugBtn.Visible = true;
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -32,8 +37,8 @@ namespace WinPower
 
         private void ApplySettings()
         {
-            Properties.Settings.Default.defaultSel = defaultSelCmb.SelectedIndex;
-            Properties.Settings.Default.timeout = int.Parse(timeoutTxt.Text);
+            Properties.Settings.Default.defaultSel = (uint)defaultSelCmb.SelectedIndex;
+            Properties.Settings.Default.timeout = uint.Parse(timeoutTxt.Text);
             Properties.Settings.Default.Save();
         }
 
@@ -47,7 +52,7 @@ namespace WinPower
             System.Diagnostics.Process.Start("https://www.francescosorge.com/fwlink/winpower");
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void debugBtn_Click(object sender, EventArgs e)
         {
             Form f = new PowerForm();
             f.Show();

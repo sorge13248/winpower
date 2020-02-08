@@ -1,11 +1,12 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Windows.Forms;
 
 namespace WinPower
 {
     public partial class PowerForm : Form
     {
-        private int remainingSeconds;
+        private uint remainingSeconds;
         private SelectedOperation selectedOperation;
         
         enum SelectedOperation
@@ -19,7 +20,7 @@ namespace WinPower
         {
             InitializeComponent();
             StopTimer();
-            Console.WriteLine(Properties.Settings.Default.defaultSel);
+
             switch (Properties.Settings.Default.defaultSel)
             {
                 case 1:
@@ -31,6 +32,11 @@ namespace WinPower
                 case 3:
                     hibernateBtn_Click(null, null);
                     break;
+            }
+
+            if (Properties.Settings.Default.debug)
+            {
+                debugLbl.Visible = true;
             }
         }
 
@@ -54,7 +60,7 @@ namespace WinPower
             StartTimer();
         }
 
-        private int GetTimeout()
+        private uint GetTimeout()
         {
             return Properties.Settings.Default.timeout;
         }
@@ -95,18 +101,39 @@ namespace WinPower
 
             if (option != ' ')
             {
-                Console.WriteLine(option);
-                //var psi = new ProcessStartInfo("shutdown", string.Format("/{0} /t 0", option));
-                //psi.CreateNoWindow = true;
-                //psi.UseShellExecute = false;
-                //Process.Start(psi);
+                shutdownCmd(option);
+            }
+        }
+
+        private void shutdownCmd(char option)
+        {
+            string options;
+            if (option == 'o')
+            {
+                options = string.Format("/{0} /t 0", "r /o");
+            }
+            else
+            {
+                options = string.Format("/{0} /t 0", option);
+            }
+
+            if (Properties.Settings.Default.debug)
+            {
+                Console.WriteLine(options);
+            }
+            else
+            {
+                ProcessStartInfo psi = new ProcessStartInfo("shutdown", options);
+                psi.CreateNoWindow = true;
+                psi.UseShellExecute = false;
+                Process.Start(psi);
             }
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
             remainingSeconds--;
-            secondsPgb.Value = 100 * remainingSeconds / GetTimeout();
+            secondsPgb.Value = (int)(100 * remainingSeconds / GetTimeout());
             secondsLbl.Text = string.Format("{0} seconds", remainingSeconds);
             if (remainingSeconds <= 0)
             {
@@ -125,6 +152,11 @@ namespace WinPower
             selectedOperation = SelectedOperation.HIBERNATE;
             StopTimer();
             StartTimer();
+        }
+
+        private void advRestartBtn_Click(object sender, EventArgs e)
+        {
+            shutdownCmd('o');
         }
     }
 }

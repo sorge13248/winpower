@@ -14,3 +14,16 @@ WinPower aims to solve this issue by providing a very simple yet powerful utilit
 
 ## Download
 You can download WinPower from 'Release' tab here on GitHub or at my website: https://www.francescosorge.com/fwlink/winpower
+
+## Hide power button in Start Menu (advanced)
+If you want to be sure you will no longer be using Windows owns power off options, you may want to hide them from Start menu.
+
+N.B.: You should be doing this operation only if you're familiar with Windows Registry Editor.
+
+- Hide restart: Navigate to 'Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\PolicyManager\default\Start\HideRestart' and set 'value' to 1
+
+- Hide shutdown: Navigate to 'Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\PolicyManager\default\Start\HideShutDown' and set 'value' to 1
+
+- Hide sleep: Navigate to 'Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\PolicyManager\default\Start\HideSleep' and set 'value' to 1
+
+- Hide hidernate: Navigate to 'Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\PolicyManager\default\Start\HideHibernate' and set 'value' to 1

@@ -170,7 +170,7 @@
             this.secondsLbl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.secondsLbl.Location = new System.Drawing.Point(3, 0);
             this.secondsLbl.Name = "secondsLbl";
-            this.secondsLbl.Size = new System.Drawing.Size(94, 50);
+            this.secondsLbl.Size = new System.Drawing.Size(109, 50);
             this.secondsLbl.TabIndex = 0;
             this.secondsLbl.Text = "60 seconds";
             this.secondsLbl.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -178,9 +178,9 @@
             // secondsPgb
             // 
             this.secondsPgb.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.secondsPgb.Location = new System.Drawing.Point(103, 3);
+            this.secondsPgb.Location = new System.Drawing.Point(118, 3);
             this.secondsPgb.Name = "secondsPgb";
-            this.secondsPgb.Size = new System.Drawing.Size(885, 44);
+            this.secondsPgb.Size = new System.Drawing.Size(870, 44);
             this.secondsPgb.TabIndex = 1;
             this.secondsPgb.Value = 100;
             // 
@@ -232,7 +232,7 @@
             // 
             // PowerForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 22F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1663, 986);
@@ -243,6 +243,7 @@
             this.Font = new System.Drawing.Font("Microsoft Tai Le", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;

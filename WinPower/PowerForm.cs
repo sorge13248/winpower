@@ -73,16 +73,21 @@ namespace WinPower
 
         private void StartTimer()
         {
+            ResetButtonsColors();
+            remainingSeconds = GetTimeout();
+            timer1.Start();
+            secondsPgb.Value = 100;
+            timeoutPnl.Visible = true;
+        }
+
+        private void ResetButtonsColors()
+        {
             shutdownBtn.BackColor = Color.Transparent;
             restartBtn.BackColor = Color.Transparent;
             hibernateBtn.BackColor = Color.Transparent;
             shutdownBtn.FlatAppearance.MouseOverBackColor = Color.Transparent;
             restartBtn.FlatAppearance.MouseOverBackColor = Color.Transparent;
             hibernateBtn.FlatAppearance.MouseOverBackColor = Color.Transparent;
-            remainingSeconds = GetTimeout();
-            timer1.Start();
-            secondsPgb.Value = 100;
-            timeoutPnl.Visible = true;
         }
 
         private void StopTimer()
@@ -157,6 +162,7 @@ namespace WinPower
         private void cancelBtn_Click(object sender, EventArgs e)
         {
             StopTimer();
+            ResetButtonsColors();
         }
 
         private void hibernateBtn_Click(object sender, EventArgs e)

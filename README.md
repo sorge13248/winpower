@@ -1,5 +1,5 @@
 # Project moved
-WinPower moved to GitLab: ![GitLab](https://gitlab.com/fsorge/winpower)
+WinPower moved to GitLab: [GitLab](https://gitlab.com/fsorge/winpower)
 
 # WinPower
 Tired of pressing restart instead of shutdown in Windows 10 Start menu and having to wait for your PC to reboot?

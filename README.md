@@ -1,3 +1,6 @@
+# Project moved
+WinPower moved to GitLab: ![GitLab](https://gitlab.com/fsorge/winpower)
+
 # WinPower
 Tired of pressing restart instead of shutdown in Windows 10 Start menu and having to wait for your PC to reboot?
 WinPower aims to solve this issue by providing a very simple yet powerful utility to shutdown, restart or hibernate your Windows computer.
